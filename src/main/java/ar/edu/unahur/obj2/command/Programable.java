@@ -26,7 +26,16 @@ public interface Programable {
 
     void reset();
 
-    void setAddr(Integer addr);
+    void setAddr(Integer addr, Integer value);
 
     Integer getAddr(Integer addr);
+
+    void guardarEstado();
+    
+    void deshacer();
+
+    MicrocontroladorProgramable crearPrograma();
+
+    void restaurarMicro(MicrocontroladorProgramable micro);
+
 }
